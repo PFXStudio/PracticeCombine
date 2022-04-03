@@ -18,7 +18,7 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="mGF-vd-lcu">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="InfoCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="InfoCell" id="yXt-dn-Lh0" customClass="InfoCell" customModule="PracticeCombine" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="44.5" width="414" height="44"/>
@@ -39,6 +39,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="D1F-ep-DYL" secondAttribute="trailing" constant="12" id="0T2-zU-QpH"/>
                                                 <constraint firstItem="D1F-ep-DYL" firstAttribute="centerY" secondItem="ZBQ-vU-da9" secondAttribute="centerY" id="EfD-64-Sqq"/>
@@ -47,6 +48,7 @@
                                                 <constraint firstItem="ZBQ-vU-da9" firstAttribute="leading" secondItem="2Eh-fy-HS1" secondAttribute="leading" constant="24" id="ZDd-Cz-9z2"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
                                             <outlet property="button" destination="D1F-ep-DYL" id="vOz-k4-vFt"/>
                                             <outlet property="nameLabel" destination="ZBQ-vU-da9" id="rSN-M1-eJo"/>
@@ -63,7 +65,7 @@
                             </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemYellowColor"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="mGF-vd-lcu" secondAttribute="bottom" id="ERD-mU-APY"/>
                             <constraint firstItem="mGF-vd-lcu" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Ubx-Xk-l1h"/>
@@ -84,8 +86,8 @@
         </scene>
     </scenes>
     <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

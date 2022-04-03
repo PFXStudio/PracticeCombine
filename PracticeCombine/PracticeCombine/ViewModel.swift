@@ -30,6 +30,7 @@ final class ViewModel: ViewModelable {
     
     private var cancelBags = [AnyCancellable]()
     private var list: [String] = []
+    private var users: [User] = []
 
     init(service: Serviceable) {
         self.service = service
@@ -44,7 +45,13 @@ extension ViewModel {
             fetchCompanyList()
         case let .touchedInfoButton(index):
             let name = list[index]
-            print(">>> \(name)")
+            requestUser(name: name)
+                .receive(on: DispatchQueue.main)
+                .sink { [weak self] users in
+                    print(">>> users \(users)")
+                    self?.users = users
+                }
+                .store(in: &cancelBags)
         }
     }
 }
@@ -68,5 +75,23 @@ private extension ViewModel {
                 presenter?.updateState(with: .list(values))
             }
             .store(in: &cancelBags)
+    }
+    
+    private func requestUser(name: String) -> AnyPublisher<[User], Never> {
+        let path = "https://jsonplaceholder.typicode.com/users"
+        guard let url = URL(string: path) else {
+            // eraseToAnyPublisher AnyPublisher를 따르도록 타입을 지운다..
+            return Just([]).eraseToAnyPublisher()
+        }
+        
+        return URLSession.shared
+            .dataTaskPublisher(for: url)
+            .subscribe(on: DispatchQueue.global())
+            .map { $0.data }
+            .decode(type: [User].self, decoder: JSONDecoder())
+            .catch { _ in
+                Just([])
+            }
+            .eraseToAnyPublisher()
     }
 }

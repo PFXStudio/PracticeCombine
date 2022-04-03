@@ -18,6 +18,7 @@
 		B016322427F4471800B7F902 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B016322327F4471800B7F902 /* ViewModel.swift */; };
 		B016322627F447A700B7F902 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = B016322527F447A700B7F902 /* Service.swift */; };
 		B016322827F4494800B7F902 /* InfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B016322727F4494800B7F902 /* InfoCell.swift */; };
+		B0289C1127F95A7D00EF3E49 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0289C1027F95A7D00EF3E49 /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		B016322327F4471800B7F902 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		B016322527F447A700B7F902 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		B016322727F4494800B7F902 /* InfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoCell.swift; sourceTree = "<group>"; };
+		B0289C1027F95A7D00EF3E49 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 				B016322527F447A700B7F902 /* Service.swift */,
 				B01631F727F4467D00B7F902 /* ViewController.swift */,
 				B016322327F4471800B7F902 /* ViewModel.swift */,
+				B0289C1027F95A7D00EF3E49 /* User.swift */,
 			);
 			path = PracticeCombine;
 			sourceTree = "<group>";
@@ -265,6 +268,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B01631F827F4467D00B7F902 /* ViewController.swift in Sources */,
+				B0289C1127F95A7D00EF3E49 /* User.swift in Sources */,
 				B016322627F447A700B7F902 /* Service.swift in Sources */,
 				B016322427F4471800B7F902 /* ViewModel.swift in Sources */,
 				B01631F427F4467D00B7F902 /* AppDelegate.swift in Sources */,

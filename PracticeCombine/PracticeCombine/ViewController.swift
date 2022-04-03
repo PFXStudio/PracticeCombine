@@ -28,6 +28,7 @@ final class ViewController: UIViewController, Presentable {
         viewModel.requestAction(with: .viewDidLoad)
         
         testCurrentValueSubject()
+        runTimer()
     }
 }
 
@@ -160,6 +161,17 @@ private extension ViewController {
         subject.send("can cancel")
         subject.send(completion: .finished)
         subject.send(completion: .failure(NSError(domain: "cancel", code: -2)))
+    }
+    
+    private func runTimer() {
+        let colors: [UIColor] = [.systemRed, .systemOrange, .systemCyan, .systemGray, .systemMint, .systemPink]
+        Timer.publish(every: 1.0, on: .main, in: .default)
+            .autoconnect() // 이걸 안 해주면 타이머가 동작하지 않음
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] _ in
+                self?.view.backgroundColor = colors.randomElement()
+            }
+            .store(in: &cancelBags)
     }
 }
 
